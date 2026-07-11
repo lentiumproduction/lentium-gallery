@@ -19,10 +19,10 @@ export const galleries: Gallery[] = [
   {
     slug: "darina-georgi",
     title: "Дарина & Георги",
-    date: "Вашият сватбен ден",
+    date: "20.06.2026",
     message: "Вашите спомени са готови.",
     cover: "/galleries/darina-georgi/darina-georgi-03.jpg",
-    downloadAllUrl: "",
+    downloadAllUrl: "https://mega.nz/folder/IcBFFRKZ#w7nERLh-9OZu_i5s-GqRqg",
     photos: [
       {
         id: "darina-georgi-01",

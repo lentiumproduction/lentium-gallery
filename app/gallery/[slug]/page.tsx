@@ -53,8 +53,8 @@ export default async function GalleryPage({ params }: PageProps) {
         <p className="eyebrow">ВАШАТА ИСТОРИЯ</p>
         <h2>Мигове, които остават.</h2>
         <p>
-          Разгледайте кадрите, отбележете любимите си снимки и изтеглете
-          оригиналите, когато добавим MEGA линковете.
+          Разгледайте кадрите, отбележете любимите си снимки и отворете
+          оригиналната галерия в MEGA за изтегляне.
         </p>
 
         {gallery.downloadAllUrl ? (
@@ -64,7 +64,7 @@ export default async function GalleryPage({ params }: PageProps) {
             target="_blank"
             rel="noreferrer"
           >
-            Изтегли всички снимки
+            Отвори всички снимки в MEGA
           </a>
         ) : (
           <button className="primary-button disabled" disabled>

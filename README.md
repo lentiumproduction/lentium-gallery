@@ -1,28 +1,17 @@
-# Lentium Gallery v0.3
+# Lentium Gallery v0.4
 
-Тази версия вече съдържа реална тестова галерия за Дарина и Георги.
+Добавено:
+- дата на сватбата: 20.06.2026;
+- работещ бутон към MEGA папката;
+- клиентът може да изтегля отделни файлове или цялата папка през MEGA.
 
-## Добавено
+MEGA:
+https://mega.nz/folder/IcBFFRKZ#w7nERLh-9OZu_i5s-GqRqg
 
-- full-screen корична снимка;
-- премиум hero секция;
-- 3 реални тестови кадъра;
-- masonry галерия;
-- fullscreen преглед;
-- стрелки и клавиатура;
-- любими кадри;
-- готови места за индивидуални MEGA линкове;
-- готов бутон за цял ZIP архив.
-
-## Качване
-
+Качване:
 1. Разархивирай ZIP файла.
-2. В GitHub отвори `lentiumproduction/lentium-gallery`.
-3. Натисни **Add file → Upload files**.
-4. Качи всички файлове и папки от архива.
-5. Натисни **Commit changes**.
-6. Изчакай Vercel да направи автоматичен deployment.
-
-След успешното публикуване отвори:
-
-`/gallery/darina-georgi`
+2. Отвори `lentiumproduction/lentium-gallery` в GitHub.
+3. Add file → Upload files.
+4. Качи съдържанието на архива.
+5. Commit changes.
+6. Изчакай Vercel да публикува автоматично.
