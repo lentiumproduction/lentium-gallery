@@ -19,11 +19,27 @@ export const galleries: Gallery[] = [
   {
     slug: "darina-georgi",
     title: "Дарина & Георги",
-    date: "Скоро",
+    date: "Вашият сватбен ден",
     message: "Вашите спомени са готови.",
-    cover: "",
+    cover: "/galleries/darina-georgi/darina-georgi-03.jpg",
     downloadAllUrl: "",
-    photos: []
+    photos: [
+      {
+        id: "darina-georgi-01",
+        src: "/galleries/darina-georgi/darina-georgi-01.jpg",
+        alt: "Дарина и Георги до сватбения автомобил"
+      },
+      {
+        id: "darina-georgi-02",
+        src: "/galleries/darina-georgi/darina-georgi-02.jpg",
+        alt: "Дарина и Георги на железопътните релси"
+      },
+      {
+        id: "darina-georgi-03",
+        src: "/galleries/darina-georgi/darina-georgi-03.jpg",
+        alt: "Дарина и Георги в романтичен сватбен кадър"
+      }
+    ]
   }
 ];
 
