@@ -474,3 +474,129 @@ footer {
     padding-top: 72px;
   }
 }
+
+
+.admin-page {
+  min-height: 100vh;
+  padding: 44px 5vw 80px;
+  background:
+    radial-gradient(circle at top right, rgba(90, 90, 203, 0.12), transparent 30%),
+    var(--paper);
+}
+
+.admin-topbar {
+  width: min(1180px, 100%);
+  margin: 0 auto 44px;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.admin-logo {
+  width: 180px;
+  height: auto;
+}
+
+.admin-topbar h1 {
+  margin-bottom: 8px;
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  letter-spacing: -0.05em;
+}
+
+.admin-subtitle,
+.admin-panel-head p,
+.admin-note {
+  color: var(--muted);
+}
+
+.admin-panel {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 24px 70px rgba(26, 22, 48, 0.08);
+}
+
+.admin-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 22px;
+}
+
+.admin-panel-head h2 {
+  margin-bottom: 6px;
+  font-size: 2rem;
+}
+
+.admin-list {
+  display: grid;
+  gap: 12px;
+}
+
+.admin-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: white;
+}
+
+.admin-card h3 {
+  margin: 4px 0 10px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.6rem;
+}
+
+.admin-card code {
+  color: var(--muted);
+}
+
+.admin-date {
+  margin: 0;
+  color: var(--brand);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.secondary-admin-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: white;
+  font-weight: 800;
+}
+
+.admin-note {
+  width: min(1180px, 100%);
+  margin: 22px auto 0;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .admin-topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-panel-head,
+  .admin-card {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .secondary-admin-button {
+    width: 100%;
+  }
+}

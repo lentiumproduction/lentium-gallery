@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import GalleryClient from "@/components/GalleryClient";
-import { getGallery } from "@/data/galleries";
+import { getPublishedGallery } from "@/lib/galleries";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -10,7 +10,7 @@ type PageProps = {
 
 export default async function GalleryPage({ params }: PageProps) {
   const { slug } = await params;
-  const gallery = getGallery(slug);
+  const gallery = await getPublishedGallery(slug);
 
   if (!gallery) notFound();
 
