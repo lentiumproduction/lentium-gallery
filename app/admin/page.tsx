@@ -6,7 +6,12 @@ import LogoutButton from "@/components/LogoutButton";
 
 export const dynamic = "force-dynamic";
 
-export default async function AdminPage() {
+type PageProps = {
+  searchParams: Promise<{ created?: string }>;
+};
+
+export default async function AdminPage({ searchParams }: PageProps) {
+  const { created } = await searchParams;
   const galleries = await getPublishedGalleries();
   const supabase = await createClient();
   const {
@@ -34,15 +39,21 @@ export default async function AdminPage() {
         <LogoutButton />
       </header>
 
+      {created && (
+        <div className="admin-success">
+          Галерията „{created}“ беше създадена успешно.
+        </div>
+      )}
+
       <section className="admin-panel">
         <div className="admin-panel-head">
           <div>
             <h2>Публикувани галерии</h2>
             <p>{galleries.length} активни</p>
           </div>
-          <button className="primary-button disabled" disabled>
-            + Нова галерия — следваща версия
-          </button>
+          <Link className="primary-button" href="/admin/new">
+            + Нова галерия
+          </Link>
         </div>
 
         <div className="admin-list">
