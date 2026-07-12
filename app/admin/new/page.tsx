@@ -63,10 +63,10 @@ export default async function NewGalleryPage({ searchParams }: PageProps) {
               <input
                 name="slug"
                 placeholder="maria-ivan"
-                pattern="[a-z0-9\u0400-\u04ff-]+"
+                pattern="[a-z0-9-]+"
               />
               <small>
-                Остави празно и системата ще го създаде автоматично.
+                Остави празно — системата автоматично ще създаде адрес на латиница.
               </small>
             </label>
 

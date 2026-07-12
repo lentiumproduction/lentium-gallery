@@ -3,9 +3,11 @@ export type GalleryPhoto = {
   src: string;
   alt: string;
   downloadUrl?: string;
+  filename?: string;
 };
 
 export type Gallery = {
+  id?: string;
   slug: string;
   title: string;
   date: string;
@@ -28,16 +30,19 @@ export const fallbackGallery: Gallery = {
       id: "darina-georgi-01",
       src: "/galleries/darina-georgi/darina-georgi-01.jpg",
       alt: "Дарина и Георги до сватбения автомобил",
+      filename: "darina-georgi-01.jpg",
     },
     {
       id: "darina-georgi-02",
       src: "/galleries/darina-georgi/darina-georgi-02.jpg",
       alt: "Дарина и Георги на железопътните релси",
+      filename: "darina-georgi-02.jpg",
     },
     {
       id: "darina-georgi-03",
       src: "/galleries/darina-georgi/darina-georgi-03.jpg",
       alt: "Дарина и Георги в романтичен сватбен кадър",
+      filename: "darina-georgi-03.jpg",
     },
   ],
 };

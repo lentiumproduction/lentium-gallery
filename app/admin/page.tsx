@@ -64,12 +64,21 @@ export default async function AdminPage({ searchParams }: PageProps) {
                 <h3>{gallery.title}</h3>
                 <code>/gallery/{gallery.slug}</code>
               </div>
-              <Link
-                className="secondary-admin-button"
-                href={`/gallery/${gallery.slug}`}
-              >
-                Отвори
-              </Link>
+              <div className="admin-card-actions">
+                <Link
+                  className="secondary-admin-button"
+                  href={`/admin/gallery/${gallery.slug}/upload`}
+                >
+                  Качи снимки
+                </Link>
+                <Link
+                  className="secondary-admin-button"
+                  href={`/gallery/${gallery.slug}`}
+                  target="_blank"
+                >
+                  Отвори
+                </Link>
+              </div>
             </article>
           ))}
         </div>
