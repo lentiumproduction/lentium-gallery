@@ -7,23 +7,18 @@ function readSupabaseConfig() {
 
   const key =
     process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ??
+    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY ??
     process.env.SUPABASE_PUBLISHABLE_KEY ??
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ??
     process.env.SUPABASE_ANON_KEY;
 
-  if (!url || !key) {
-    return null;
-  }
-
+  if (!url || !key) return null;
   return { url, key };
 }
 
 export function createSupabaseServerClient() {
   const config = readSupabaseConfig();
-
-  if (!config) {
-    return null;
-  }
+  if (!config) return null;
 
   return createClient(config.url, config.key, {
     auth: {

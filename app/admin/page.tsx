@@ -1,11 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getPublishedGalleries } from "@/lib/galleries";
+import { createClient } from "@/lib/supabase/server";
+import LogoutButton from "@/components/LogoutButton";
 
 export const dynamic = "force-dynamic";
 
 export default async function AdminPage() {
   const galleries = await getPublishedGalleries();
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
 
   return (
     <main className="admin-page">
@@ -22,9 +28,10 @@ export default async function AdminPage() {
           <p className="eyebrow">LENTIUM ADMIN</p>
           <h1>Галерии</h1>
           <p className="admin-subtitle">
-            Първа връзка между сайта и Supabase.
+            Влезли сте като {user?.email}
           </p>
         </div>
+        <LogoutButton />
       </header>
 
       <section className="admin-panel">
